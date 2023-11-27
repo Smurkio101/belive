@@ -1,0 +1,151 @@
+body {
+background-color: black;
+
+}
+
+.container {
+  display: flex;
+}
+
+
+.container img {
+  width: 100px;
+  margin-right: 10px; 
+}
+
+body {
+  background-color: #333;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #222;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #ff0000; 
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  margin: 0 10px;
+}
+
+.search-bar {
+  margin-right: 10px;
+}
+
+input[type="text"] {
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+}
+.menu_wrapper {
+  position: relative;
+}
+
+#menuBtn {
+  background-color: rgb(36, 36, 33);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgb(38, 0, 255);
+}
+
+.menu_link {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.menu_link:hover {
+  background-color: white;
+  color: yellow;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.image-wrapper {
+  width: 100px; /* Adjust the width as needed */
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.image-wrapper img {
+  width: 100%;
+}
+
+.image-wrapper p {
+  margin-top: 5px; /* Adjust the margin as needed */
+}
+
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #0b0404;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.video-container {
+  max-width: 800px;
+  position: relative;
+}
+
+.controls {
+  display: flex;
+  margin-top: 10px;
+}
+
+#reloadButton {
+  background-color: red;
+  color: white;
+}
+
+#loadButton {
+  margin-left: 10px;
+}
+
+.loading-indicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: red;
+  font-size: 24px;
+}

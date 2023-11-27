@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+    <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Video Player</title>
+    {% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+   </head>
+   <body>
+       <div class="video-container">
+           <video id="myVideo" controls>
+               <source id="videoSource" type="video/mp4">
+               Your browser does not support the video tag.
+           </video>
+           <div class="controls">
+               <button id="playButton">Play</button>
+               <button id="reloadButton">Reload</button>
+               <input type="text" id="videoInput" placeholder="Enter video URL">
+               <button id="loadButton">Load Video</button>
+           </div>
+       </div>
+
+       <script type="text/javascript" src="{% static "script/video.js" %}"></script>
+
+    </body>
+ </html>
