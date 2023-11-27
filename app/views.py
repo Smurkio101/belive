@@ -5,11 +5,12 @@ def home (request):
            "page": "home"
     }
     return render (request, "app/pages/home.html", context)
+
 def watch(request, video_id):
-       video_id = {
+       context = {
               "page":"watch"
               
        }
-       return render (HttpResponse, "app/pages/watchpage.html",video_id)
+       return render (request, "app/pages/watchpage.html", video_id)
        
        
