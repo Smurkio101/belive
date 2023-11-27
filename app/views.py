@@ -11,6 +11,6 @@ def watch(request, video_id):
               "page":"watch"
               
        }
-       return render (request, "app/pages/watchpage.html", video_id)
+       return render (request, "app/pages/watchpage.html", context)
        
        
