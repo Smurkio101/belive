@@ -8,19 +8,15 @@
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
    </head>
    <body>
-       <div class="video-container">
-           <video id="myVideo" controls>
-               <source id="videoSource" type="video/mp4">
-               Your browser does not support the video tag.
-           </video>
-           <div class="controls">
-               <button id="playButton">Play</button>
-               <button id="reloadButton">Reload</button>
-               <input type="text" id="videoInput" placeholder="Enter video URL">
-               <button id="loadButton">Load Video</button>
-           </div>
-       </div>
-
+    <iframe width="560" height="315" src="/stream/" frameborder="0" allowfullscreen></iframe>
+      <div class="controls">
+          <button id="playButton" class="button-green">▶</button>
+          <button id="reloadButton" class="button-blue">↺</button>
+          <input type="text" id="videoInput" placeholder="Enter video URL">
+          <button id="loadButton" class="button-orange">Load Video</button>
+      </div>
+  </div>
+  </div>
        <script type="text/javascript" src="{% static "script/video.js" %}"></script>
 
     </body>

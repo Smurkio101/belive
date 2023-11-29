@@ -149,3 +149,18 @@ img {
   color: red;
   font-size: 24px;
 }
+
+.button-green {
+  background-color: green;
+  color: white;
+}
+
+.button-blue {
+  background-color: blue;
+  color: white;
+}
+
+.button-orange {
+  background-color: orange;
+  color: white;
+}
