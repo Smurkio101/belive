@@ -1,63 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %}Anime Spot{% endblock %}</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Anime spot{% endblock %}</title>
     {% load static %}
+    {% load crispy_forms_tags %}
+    <link rel="stylesheet" href="{% static 'css/filter.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-    {% block additional_styles %}{% endblock %}
+    <script type="text/javascript" src="{% static "script/filter.js" %}"></script> 
 </head>
 <body>
-    <nav>
-        <div class="menu_wrapper">
-            <button id="menuBtn">☰</button>
-            <div id="menu">
-                {% block menu_links %}
-                    <a href="action.html" class="menu_link">Action</a>
-                    <a href="adventure.html" class="menu_link">Adventure</a>
-                    <a href="fantasy.html" class="menu_link">Fantasy</a>
-                {% endblock %}
-            </div>
-        </div>
-        <a href="#" class="logo">{% block logo %}Anime Spot{% endblock %}</a>
-        <div class="menu">
-            {% block additional_menu_links %}{% endblock %}
-            <a href="#home">Home</a>
-            <a href="#randomizer">Randomizer</a>
-            <a href="#popular">Popular</a>
-        </div>
-        <div class="search-bar">
-            <input type="text" placeholder="Search...">
-        </div>
-    </nav>
+  <nav>
+    <div class="menu_wrapper">
+      <button id="menuBtn">☰</button>
+      <div id="menu">
+        <a href="home" class="menu_link">home</a>
+          <a href="action.html" class="menu_link">Action</a>
+          <a href="adventure.html" class="menu_link">Adventure</a>
+          <a href="fantasy.html" class="menu_link">Fantasy</a>
+      </div>
+      <a href="#" class="logo">Anime Spot</a>
+  </div>
+  </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search...">
+    </div>
 
-    {% block slider %}
-        <!-- Your Swiper slider code here -->
-    {% endblock %}
+</nav>
 
-    <div class="container">
+
+    <div id="content">
+      {% if messages %}
+      {% for messages in messages %}
+       <div class="alert alert-{{ message.tags }}">
+        {{ message }}
+       </div>
+      {% endfor %}
+      {% endif %}
         {% block content %}{% endblock %}
     </div>
 
-    <footer style="background-color: #333; color: white; padding: 20px;">
-        {% block social_links %}
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-                <div>
-                    <h3>Follow Us</h3>
-                    <a href="#" style="color: white; text-decoration: none; margin-right: 10px;">Facebook</a>
-                    <a href="#" style="color: white; text-decoration: none;">Twitter</a>
-                </div>
-            </div>
-            <hr style="border-color: #555; margin: 15px 0;">
-            <p style="text-align: center; font-size: 14px;">&copy; {% block copyright_year %}2023{% endblock %} Anime Spot. All rights reserved.</p>
-        {% endblock %}
-    </footer>
 
-    <script type="text/javascript" src="{% static 'script/script.js' %}"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script type="text/javascript" src="{% static 'script/slider.js' %}"></script>
+
+
+
+
+
+
+
+
+
+
+  <hr style="border-color: #555; margin: 15px 0;">
+
+  <p style="text-align: center; font-size: 14px;">&copy; 2023 Anime Spot. All rights reserved.</p>
+</footer>
+<script type="text/javascript" src="{% static "script/script.js" %}"></script>   
 </body>
 </html>

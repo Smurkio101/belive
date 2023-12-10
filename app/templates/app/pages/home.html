@@ -9,254 +9,224 @@
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
 
-
   </head>
 
-  
+ 
 
   <body>
-    <nav>
-      <div class="menu_wrapper">
-        <button id="menuBtn">☰</button>
-        <div id="menu">
-            <a href="action.html" class="menu_link">Action</a>
-            <a href="adventure.html" class="menu_link">Adventure</a>
-            <a href="fantasy.html" class="menu_link">Fantasy</a>
-        </div>
+  <nav>
+  <div class="menu_wrapper">
+    <button id="menuBtn">☰</button>
+    <div id="menu">
+      <a href="action.html" class="menu_link">Action</a>
+      <a href="adventure.html" class="menu_link">Adventure</a>
+      <a href="fantasy.html" class="menu_link">Fantasy</a>
     </div>
-    </div>
-      <a href="#" class="logo">Anime Spot</a>
-      <div class="menu">
-        <a href="#home">Home</a>
-        <a href="#randomizer">Randomizer</a>
-        <a href="#popular">Popular</a>
-      </div>
-      <div class="search-bar">
-        <input type="text" placeholder="Search...">
-      </div>
-    </nav>
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <!-- Slide 1 -->
-        <div class="swiper-slide">
-          <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 1">
-        </div>
-        <!-- Slide 2 -->
-        <div class="swiper-slide">
-          <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
-        </div>
-        <!-- Add more slides as needed -->
-      </div>
-      <div class="swiper-pagination"></div>
-    
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-    </div>
+    <a href="#" class="logo">Anime Spot</a>
+  </div>
+
+  <div class="menu">
+    <a href="#home">Home</a>
+    <a href="#randomizer">Randomizer</a>
+    <a href="#popular">Popular</a>
+  </div>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Search...">
+  </div>
 
   
-
-
-
+  <div class="navbar-nav">
+    {% if user.is_authenticated %}
+        <a href="profile" style="display: flex; align-items: center;">
+            <img src="{{ user.profile.image.url }}" alt="Profile Image" style="width: 50px; height: 50px; border-radius: 50%;">
+        </a>
+  
+   {% else %}
+    <a href="login">🤷‍♂️</a>
+  {% endif %}
+  </div>
+</div>
+</nav>
     
-    <div class="container">
-      <div class="image-wrapper">
-          <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 1">
-          <p>high school </p>
-      </div>
-      <div class="image-wrapper">
-          <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
-          <p>high school </p>
-      </div>
-      <div class="image-wrapper">
-        <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
-        <p>high school </p>   
-    </div>
-    <div class="image-wrapper">
-      <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
-      <p>high school </p>
-    </div>
-    <div class="image-wrapper">
-      <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
-      <p>high school </p>
-  </div>
-  <div class="image-wrapper">
-    <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
-    <p>high school </p>
-  </div>
-  <div class="image-wrapper">
-    <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
-    <p>high school </p>
-  </div>
-  <div class="image-wrapper">
-    <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
-    <p>high school </p>
-  </div>
-  <div class="image-wrapper">
-    <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
-    <p>high school </p>
-  </div>
-  <div class="image-wrapper">
-    <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
-    <p>high school </p>
-  </div>
- </div>
 
-    <div class="container">
+
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><img src="https://www.hdwallpapers.in/download/hatsune_miku_anime_girl_4k-HD.jpg" alt="Slide 1"></div>
+    <div class="swiper-slide"><img src="https://www.hdwallpapers.in/download/hatsune_miku_anime_girl_4k-HD.jpg" alt="Slide 2"></div>
+    <div class="swiper-slide"><img src="https://www.hdwallpapers.in/download/hatsune_miku_anime_girl_4k-HD.jpg" alt="Slide 3"></div>
+  </div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-scrollbar"></div>
+</div>
+
+</div>
+
+
+
+<div class="container">
+  <div class="image-wrapper">
+      <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 1">
+      <p>high school </p>
+  </div>
+  <div class="image-wrapper">
+      <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+      <p>high school </p>
+  </div>
+  <div class="image-wrapper">
+    <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+    <p>high school </p>   
+</div>
+<div class="image-wrapper">
+  <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+  <p>high school </p>
+</div>
+<div class="image-wrapper">
+  <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+  <p>high school </p>
+</div>
+<div class="image-wrapper">
+<img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+<p>high school </p>
+</div>
+<div class="image-wrapper">
+<img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+<p>high school </p>
+</div>
+<div class="image-wrapper">
+<img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+<p>high school </p>
+</div>
+<div class="image-wrapper">
+<img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+<p>high school </p>
+</div>
+<div class="image-wrapper">
+<img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+<p>high school </p>
+</div>
+<div class="image-wrapper">
+  <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+  <p>high school </p>
+</div>
+<div class="image-wrapper">
+  <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+  <p>high school </p>
+</div>
+<div class="image-wrapper">
+  <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+  <p>high school </p>
+</div>
+<div class="image-wrapper">
+  <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+  <p>high school </p>
+</div>
+<div class="image-wrapper">
+  <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+  <p>high school </p>
+</div>
+<div class="image-wrapper">
+    <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+    <p>high school </p>
+  </div>
+  <div class="image-wrapper">
+    <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+    <p>high school </p>
+  </div>
+  <div class="image-wrapper">
+    <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+    <p>high school </p>
+  </div>
+  <div class="image-wrapper">
+      <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+      <p>high school </p>
+    </div>
+    <div class="image-wrapper">
+      <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+      <p>high school </p>
+    </div>
     <div class="image-wrapper">
         <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
         <p>high school </p>
-    </div>
-    <div class="image-wrapper">
-      <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
-      <p>high school </p> 
-  </div>
-  <div class="image-wrapper">
-    <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
-    <p>high school </p>
-  </div>
-  <div class="image-wrapper">
-    <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
-    <p>high school </p>
-</div>
-<div class="image-wrapper">
-  <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
-  <p>high school </p>
-</div>
-<div class="image-wrapper">
-  <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
-  <p>high school </p>
-</div>
-<div class="image-wrapper">
-  <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
-  <p>high school </p>
-</div>
-<div class="image-wrapper">
-  <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
-  <p>high school </p>
-</div>
-<div class="image-wrapper">
-  <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
-  <p>high school </p>
-</div>
-<div class="image-wrapper">
-  <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
-  <p>high school </p>
-</div>
-</div>
-
-<div class="container">
-  <div class="image-wrapper">
-      <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
-      <p>high school </p>
-  </div>
-  <div class="image-wrapper">
-    <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
-    <p>high school </p> 
-</div>
-<div class="image-wrapper">
-  <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
-  <p>high school </p>
-</div>
-<div class="image-wrapper">
-  <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
-  <p>high school </p>
-</div>
-<div class="image-wrapper">
-<img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
-<p>high school </p>
-</div>
-<div class="image-wrapper">
-<img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
-<p>high school </p>
-</div>
-<div class="image-wrapper">
-<img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
-<p>high school </p>
-</div>
-<div class="image-wrapper">
-<img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
-<p>high school </p>
-</div>
-<div class="image-wrapper">
-<img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
-<p>high school </p>
-</div>
-<div class="image-wrapper">
-<img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
-<p>high school </p>
+      </div>
+      <div class="image-wrapper">
+        <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+        <p>high school </p>
+      </div>
+      <div class="image-wrapper">
+        <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+        <p>high school </p>
+      </div>
+      <div class="image-wrapper">
+          <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+          <p>high school </p>
+        </div>
+        <div class="image-wrapper">
+          <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+          <p>high school </p>
+        </div>
+        <div class="image-wrapper">
+            <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+            <p>high school </p>
+          </div>
+          <div class="image-wrapper">
+            <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+            <p>high school </p>
+          </div>
+          <div class="image-wrapper">
+            <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+            <p>high school </p>
+          </div>
+          <div class="image-wrapper">
+              <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+              <p>high school </p>
+            </div>
+            <div class="image-wrapper">
+              <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+              <p>high school </p>
+            </div>
+            <div class="image-wrapper">
+              <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+              <p>high school </p>
+            </div>
+            <div class="image-wrapper">
+                <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+                <p>high school </p>
+              </div>
+              <div class="image-wrapper">
+                <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+                <p>high school </p>
+              </div>
+              <div class="image-wrapper">
+                <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+                <p>high school </p>
+              </div>
+              <div class="image-wrapper">
+                  <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+                  <p>high school </p>
+                </div>
+                <div class="image-wrapper">
+                  <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+                  <p>high school </p>
+                </div>
 </div>
 </div>
-<div class="container">
-  <div class="image-wrapper">
-      <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
-      <p>high school </p>
-  </div>
-  <div class="image-wrapper">
-    <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
-    <p>high school </p> 
-</div>
-<div class="image-wrapper">
-  <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
-  <p>high school </p>
-</div>
-<div class="image-wrapper">
-  <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
-  <p>high school </p>
-</div>
-<div class="image-wrapper">
-<img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
-<p>high school </p>
-</div>
-<div class="image-wrapper">
-<img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
-<p>high school </p>
-</div>
-<div class="image-wrapper">
-<img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
-<p>high school </p>
-</div>
-<div class="image-wrapper">
-<img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
-<p>high school </p>
-</div>
-<div class="image-wrapper">
-<img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
-<p>high school </p>
-</div>
-<div class="image-wrapper">
-<img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
-<p>high school </p>
-</div>
-
-
-
-
-
-
-
-
-
-
-
 
 
 <footer style="background-color: #333; color: white; padding: 20px;">
   <div style="display: flex; justify-content: space-between; align-items: center;">
-    <div>
-      <h3>Follow Us</h3>
-      <a href="#" style="color: white; text-decoration: none; margin-right: 10px;">Facebook</a>
-      <a href="#" style="color: white; text-decoration: none;">Twitter</a>
-    </div>
-  </div>
-
+   
   <hr style="border-color: #555; margin: 15px 0;">
 
   <p style="text-align: center; font-size: 14px;">&copy; 2023 Anime Spot. All rights reserved.</p>
 </footer>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 <script type="text/javascript" src="{% static "script/script.js" %}"></script>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script type="text/javascript" src="{% static "script/slider.js" %}"></script>
+
 
 
    

@@ -1,0 +1,75 @@
+{% extends 'app/pages/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<style>
+    .content-section {
+        max-width: 600px;
+        margin: auto;
+    }
+    
+    .media {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    
+    .account-img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 15px;
+    }
+    
+    .media-body {
+        text-align: left;
+    }
+    
+    .custom-form {
+        margin-top: 20px;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    .btn-outline-info {
+        color: #17a2b8;
+        background-color: transparent;
+        border-color: #17a2b8;
+    }
+    
+    .btn-outline-info:hover {
+        color: #fff;
+        background-color: #17a2b8;
+        border-color: #17a2b8;
+    }
+</style>
+
+
+<div class="content-section">
+    <div class="media">
+        <img class="rounded-circle account-img" src="{{ user.profile.image.url }}" alt="{{ user.username }} profile picture">
+        <div class="media-body ml-3">
+            <h2 class="account-heading">{{ user.username }}</h2>
+            <p class="text-secondary">{{ user.email }}</p>
+        </div>
+    </div>
+    <form method="POST" enctype="multipart/form-data" style="margin-top: 20px;">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Profile info</legend>
+            {{ u_form.as_p }}
+            {{ p_form.as_p }}
+        </fieldset>
+        <div class="form-group">
+            <button class="btn btn-outline-info" type="submit">Update</button>
+        </div>
+    </form>
+    <small class="text-muted">
+        Want to logout? <a class="ml-2" href="logout">Logout</a>
+    </small>
+</div>
+{% endblock %}

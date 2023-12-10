@@ -1,0 +1,220 @@
+{% extends 'app/pages/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+
+<div class="filter-bar">
+    <label for="genre">Genre:</label>
+    <select id="genre" name="genre">
+      <option value="action">Action</option>
+      <option value="comedy">Comedy</option>
+      <!-- Add more genre options as needed -->
+    </select>
+  
+    <label for="rating">Rating:</label>
+    <select id="rating" name="rating">
+      <option value="1">1 star</option>
+      <option value="2">2 stars</option>
+      <!-- Add more rating options as needed -->
+    </select>
+  
+    <label for="language">Language:</label>
+    <select id="language" name="language">
+      <option value="japanese">Japanese</option>
+      <option value="english">English</option>
+      <!-- Add more language options as needed -->
+    </select>
+  
+    <label for="recently-updated">Recently Updated:</label>
+    <input type="checkbox" id="recently-updated" name="recently-updated">
+  
+    <button onclick="applyFilters()">Apply Filters</button>
+  </div>
+  
+  <!-- Display anime results here -->
+  <div id="anime-results">
+    <!-- Anime cards will be displayed here -->
+
+  </div>
+</div>
+
+     
+    <div class="container">
+        <div class="image-wrapper">
+            <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 1">
+            <p>high school </p>
+        </div>
+        <div class="image-wrapper">
+            <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+            <p>high school </p>
+        </div>
+        <div class="image-wrapper">
+          <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+          <p>high school </p>   
+      </div>
+      <div class="image-wrapper">
+        <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+        <p>high school </p>
+      </div>
+      <div class="image-wrapper">
+        <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+        <p>high school </p>
+    </div>
+    <div class="image-wrapper">
+      <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+      <p>high school </p>
+    </div>
+    <div class="image-wrapper">
+      <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+      <p>high school </p>
+    </div>
+    <div class="image-wrapper">
+      <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+      <p>high school </p>
+    </div>
+    <div class="image-wrapper">
+      <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+      <p>high school </p>
+    </div>
+    <div class="image-wrapper">
+      <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+      <p>high school </p>
+    </div>
+    <div class="image-wrapper">
+        <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+        <p>high school </p>
+      </div>
+      <div class="image-wrapper">
+        <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+        <p>high school </p>
+      </div>
+      <div class="image-wrapper">
+        <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+        <p>high school </p>
+      </div>
+      <div class="image-wrapper">
+        <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+        <p>high school </p>
+      </div>
+      <div class="image-wrapper">
+        <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+        <p>high school </p>
+      </div>
+      <div class="image-wrapper">
+          <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+          <p>high school </p>
+        </div>
+        <div class="image-wrapper">
+          <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+          <p>high school </p>
+        </div>
+        <div class="image-wrapper">
+          <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+          <p>high school </p>
+        </div>
+        <div class="image-wrapper">
+            <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+            <p>high school </p>
+          </div>
+          <div class="image-wrapper">
+            <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+            <p>high school </p>
+          </div>
+          <div class="image-wrapper">
+              <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+              <p>high school </p>
+            </div>
+            <div class="image-wrapper">
+              <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+              <p>high school </p>
+            </div>
+            <div class="image-wrapper">
+              <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+              <p>high school </p>
+            </div>
+            <div class="image-wrapper">
+                <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+                <p>high school </p>
+              </div>
+              <div class="image-wrapper">
+                <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+                <p>high school </p>
+              </div>
+              <div class="image-wrapper">
+                  <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+                  <p>high school </p>
+                </div>
+                <div class="image-wrapper">
+                  <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+                  <p>high school </p>
+                </div>
+                <div class="image-wrapper">
+                  <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+                  <p>high school </p>
+                </div>
+                <div class="image-wrapper">
+                    <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+                    <p>high school </p>
+                  </div>
+                  <div class="image-wrapper">
+                    <img src="https://th.bing.com/th/id/OIP.Mt-itNZB-cMjpTNSbUq2RgHaI5?rs=1&pid=ImgDetMain" alt="Image 2">
+                    <p>high school </p>
+                  </div>
+                
+   </div>
+    
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Modern Dark Purple Pagination</title>
+     <style>
+       body {
+         background-color: #1a1a1a;
+         color: #fff;
+         font-family: Arial, sans-serif;
+         text-align: center;
+       }
+   
+       .pagination {
+         display: flex;
+         list-style: none;
+         padding: 0;
+         justify-content: center;
+       }
+   
+       .pagination li {
+         margin: 0 5px;
+       }
+   
+       .pagination a, .pagination span {
+         display: inline-block;
+         padding: 10px;
+         text-decoration: none;
+         background-color: #4b0082; /* Dark Purple */
+         color: #fff;
+         border-radius: 5px;
+       }
+   
+       .pagination a:hover {
+         background-color: #800080; /* Purple */
+       }
+     </style>
+   </head>
+   <body>
+   
+     <ul class="pagination">
+       <li><a href="#">Previous</a></li>
+       <li><span>1</span></li>
+       <li><a href="#">2</a></li>
+       <li><a href="#">3</a></li>
+       <li><a href="#">Next</a></li>
+     </ul>
+   
+   </body>
+   </html>
+{% endblock %}
