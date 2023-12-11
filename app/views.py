@@ -3,6 +3,9 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .forms import UserRegisterForm
 from .forms import UserUpdateForm,ProfileUpdateForm
+import requests
+import json
+import pprint
 
 def home (request):
     context = {
@@ -64,6 +67,15 @@ def profile(request):
     }
 
     return render(request, "app/pages/profile.html", context)
+
+def home (request):
+    res = requests.get("https://gogoanime-thullydev-api.onrender.com/recent-release")
+    data = res.json()
+    pprint(data)
+    context = {
+           "page": "home"
+    }
+    return render (request, "app/pages/home.html", context)
 
 
 
