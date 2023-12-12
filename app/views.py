@@ -5,13 +5,9 @@ from .forms import UserRegisterForm
 from .forms import UserUpdateForm,ProfileUpdateForm
 import requests
 import json
-import pprint
+from pprint import pprint
 
-def home (request):
-    context = {
-           "page": "home"
-    }
-    return render (request, "app/pages/home.html", context)
+
 
 def watch(request, video_id):
     context = {
@@ -68,21 +64,31 @@ def profile(request):
 
     return render(request, "app/pages/profile.html", context)
 
+
+
+
+
+
 def home (request):
     res = requests.get("https://gogoanime-thullydev-api.onrender.com/recent-release")
     data = res.json()
     pprint(data)
     context = {
-           "page": "home"
+           "page": "home",
+           "data": data,
     }
     return render (request, "app/pages/home.html", context)
 
 
-
-
-
-
-
+def filter (request):
+    res = requests.get("https://gogoanime-thullydev-api.onrender.com/recent-release")
+    data = res.json()
+    pprint(data)
+    context = {
+           "page": "filter",
+           "data": data,
+    }
+    return render (request, "app/pages/filter.html", context)
 
 
 
