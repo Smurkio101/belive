@@ -70,7 +70,7 @@ def profile(request):
 
 
 def home (request):
-    res = requests.get("https://gogoanime-thullydev-api.onrender.com/recent-release")
+    res = requests.get("https://gogoanime-thullydev-api.onrender.com/anime-details/naruto")
     data = res.json()
     pprint(data)
     context = {
@@ -81,7 +81,7 @@ def home (request):
 
 
 def filter (request):
-    res = requests.get("https://gogoanime-thullydev-api.onrender.com/recent-release")
+    res = requests.get("https://gogoanime.consumet.stream/recent-release")
     data = res.json()
     pprint(data)
     context = {
@@ -89,6 +89,9 @@ def filter (request):
            "data": data,
     }
     return render (request, "app/pages/filter.html", context)
+
+
+
 
 
 
