@@ -1,0 +1,83 @@
+
+body {
+    background-color: #1c1717;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+    .dropdown button {
+      background-color: #1d0cff; /* Yellow background */
+      color: #000; /* Black text color */
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+    }
+    p {
+        background-color: #2b2b2b; /* Yellow background */
+        color: #d80bdf;
+        text-align: center;
+        border: 1px;
+    }
+
+    
+    ropdown-content {
+      display: none;
+      position: center;
+      background-color: #e23535;
+      color: #3f1dff; /* Yellow text color */
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      padding: 12px;
+      z-index: 1;
+    }
+    
+    .inner-con {
+        width: 90%;
+        background: red;
+    }
+    
+    .episode-con {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .label-con {
+        padding: 20px;
+    }
+    
+    .episodes-block-nav-con {
+        background: black;
+    }
+    
+    .episodes-block-nav-con > ul {display: flex;gap: 25px;list-style: none;padding: 10px 25px;margin: 0;}
+    
+    .episode-block {
+        display: none;
+    }
+    
+    
+    .episode-block > ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 10px 25px;
+        margin: 0;
+        list-style: none;
+    }
+    
+    li.episode-link {
+        background: blue;
+        padding: 10px;
+    }
+    
+    a.episode {
+        color: wheat;
+        text-decoration: none;
+    }
+    
+    .episode-block.active {
+        display: block;
+    }

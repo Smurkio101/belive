@@ -9,11 +9,6 @@ from pprint import pprint
 
 
 
-def watch(request, video_id):
-    context = {
-        "page":"watch"
-        }
-    return render (request, "app/pages/watchpage.html", context)
       
 def  stream(request, video_id):
     context = {
@@ -69,8 +64,18 @@ def profile(request):
 
 
 
-def home (request):
+def watch(request, video_id):
     res = requests.get("https://gogoanime-thullydev-api.onrender.com/anime-details/naruto")
+    data = res.json()
+    pprint(data)
+    context = {
+        "page":"watch",
+        "data": data,
+        }
+    return render (request, "app/pages/watchpage.html", context)
+
+def home (request):
+    res = requests.get("https://gogoanime.consumet.stream/recent-release")
     data = res.json()
     pprint(data)
     context = {
@@ -89,14 +94,3 @@ def filter (request):
            "data": data,
     }
     return render (request, "app/pages/filter.html", context)
-
-
-
-
-
-
-
-    
-       
-
-       

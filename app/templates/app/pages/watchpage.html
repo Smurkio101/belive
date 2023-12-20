@@ -1,21 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-   <head>
-    <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Video Player</title>
-    {% load static %}
-<link rel="stylesheet" href="{% static 'css/style.css' %}">
-   </head>
-   <body>
-   {{data.episodeId}}
-   {{data.animeTitle}}
-   {{data.animeTitle}}
-   {{data.synopsis}}
-   </body>
+{% extends 'app/pages/base.html' %}
+{% load static %}
 
-   <body>
-    
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/watchpage.css'%}">
+
+
+
+       <p>ANIME NAME:{{data.animeTitle}}</p>
+  
+<div class="dropdown">
+  <button onclick="toggleDescription()">discription</button>
+  <div id="description" class="dropdown-content">
+    <p>{{data.synopsis}}</p>
+  </div>
+</div>
+
     <iframe width="560" height="315"  src="/stream/mgalgmalgjaljj" frameborder="0" allowfullscreen></iframe>
       <div class="controls">
           <button id="playButton" class="button-green">▶</button>
@@ -23,10 +23,72 @@
           <input type="text" id="videoInput" placeholder="Enter video URL">
           <button id="loadButton" class="button-orange">Load Video</button>
       </div>
-  </div>
-  </div>
+      <div class="episode-con">
+        <div class="inner-con">
+        <div class="label-con">
+        EPISODES
+        </div>
+        <div class="episodes-block-nav-con">
+        <ul>
+        <li class="episodes-block-link-item"><a href="#" class="episode-link" data-block-id="ep_1-10">1-10</a></li>
+        <li class="episodes-block-link-item"><a href="#" class="episode-link" data-block-id="ep_10-20">10-20</a></li>
+        <li class="episodes-block-link-item"><a href="#" class="episode-link" data-block-id="ep_20-30">20-30</a></li>
+        </ul>
+        </div>
+        <div class="episodes-link-con">
+        <div class="episode-block active" data-open="true" data-block-id="ep_1-10">
+           <ul>
+            <li class="episode-link"><a href="" class="episode">episode-1-10</a></li>
+            <li class="episode-link"><a href="" class="episode">episode-1-10</a></li>
+            <li class="episode-link"><a href="" class="episode">episode-1-10</a></li>
+            <li class="episode-link"><a href="" class="episode">episode-1-10</a></li>
+            <li class="episode-link"><a href="" class="episode">episode-1-10</a></li>
+            <li class="episode-link"><a href="" class="episode">episode-1-10</a></li>
+            <li class="episode-link"><a href="" class="episode">episode-1-10</a></li>
+            <li class="episode-link"><a href="" class="episode">episode-1-10</a></li>
+            <li class="episode-link"><a href="" class="episode">episode-1-10</a></li>
+            <li class="episode-link"><a href="" class="episode">episode-1-10</a></li>
+           </ul>
+        </div>
+        <div class="episode-block" data-open="false" data-block-id="ep_10-20">
+           <ul>
+            <li class="episode-link"><a href="" class="episode">episode-10-20</a></li>
+            <li class="episode-link"><a href="" class="episode">episode-10-20</a></li>
+            <li class="episode-link"><a href="" class="episode">episode-10-20</a></li>
+            <li class="episode-link"><a href="" class="episode">episode-10-20</a></li>
+            <li class="episode-link"><a href="" class="episode">episode-10-20</a></li>
+            <li class="episode-link"><a href="" class="episode">episode-10-20</a></li>
+            <li class="episode-link"><a href="" class="episode">episode-10-20</a></li>
+            <li class="episode-link"><a href="" class="episode">episode-10-20</a></li>
+            <li class="episode-link"><a href="" class="episode">episode-10-20</a></li>
+            <li class="episode-link"><a href="" class="episode">episode-10-20</a></li>
+           </ul>
+        </div>
+        <div class="episode-block" data-open="false" data-block-id="ep_20-30">
+           <ul>
+            <li class="episode-link"><a href="" class="episode">episode-20-30</a></li>
+            <li class="episode-link"><a href="" class="episode">episode-20-30</a></li>
+            <li class="episode-link"><a href="" class="episode">episode-20-30</a></li>
+            <li class="episode-link"><a href="" class="episode">episode-20-30</a></li>
+            <li class="episode-link"><a href="" class="episode">episode-20-30</a></li>
+            <li class="episode-link"><a href="" class="episode">episode-20-30</a></li>
+            <li class="episode-link"><a href="" class="episode">episode-20-30</a></li>
+            <li class="episode-link"><a href="" class="episode">episode-20-30</a></li>
+            <li class="episode-link"><a href="" class="episode">episode-20-30</a></li>
+            <li class="episode-link"><a href="" class="episode">episode-20-30</a></li>
+           </ul>
+        </div>
+        </div>
+        </div>
+        </div>
+            </div>
+        </div>
+    </div>
+    </div> 
+     
+</div>
        <script type="text/javascript" src="{% static "script/video.js" %}"></script>
-      
+       <script type="text/javascript" src="{% static "script/watchpage.js" %}"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
        
-    </body>
- </html>
+       {% endblock %}
