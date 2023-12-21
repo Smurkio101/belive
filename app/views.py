@@ -8,14 +8,6 @@ import json
 from pprint import pprint
 
 
-
-      
-def  stream(request, video_id):
-    context = {
-        "page":"stream"
-        }
-    return render (request, "app/pages/stream.html", context) 
-
 def filter (request):
     context = {
            "page": "filter"
@@ -63,19 +55,8 @@ def profile(request):
 
 
 
-
-def watch(request, video_id):
-    res = requests.get("https://gogoanime-thullydev-api.onrender.com/anime-details/naruto")
-    data = res.json()
-    pprint(data)
-    context = {
-        "page":"watch",
-        "data": data,
-        }
-    return render (request, "app/pages/watchpage.html", context)
-
 def home (request):
-    res = requests.get("https://gogoanime.consumet.stream/recent-release")
+    res = requests.get("https://gogoanime-thullydev-api.onrender.com/")
     data = res.json()
     pprint(data)
     context = {
@@ -86,7 +67,7 @@ def home (request):
 
 
 def filter (request):
-    res = requests.get("https://gogoanime.consumet.stream/recent-release")
+    res = requests.get("")
     data = res.json()
     pprint(data)
     context = {
@@ -94,3 +75,20 @@ def filter (request):
            "data": data,
     }
     return render (request, "app/pages/filter.html", context)
+
+def  stream(request, video_id):
+    context = {
+        "page":"stream"
+        }
+    return render (request, "app/pages/stream.html", context) 
+
+
+def watch(request, video_id):
+    res = requests.get("https://gogoanime-thullydev-api.onrender.com/vidcdn/watch/naruto-episode-220")
+    data = res.json()
+    pprint(data)
+    context = {
+        "page":"watch",
+        "data": data,
+        }
+    return render (request, "app/pages/watchpage.html", context)

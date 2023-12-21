@@ -17,11 +17,11 @@
     width="640"
     height="264"
    >
-
+   
+ {{data|safe}} 
    {% for source in data.sources %}
        <source src="{{source.file}}" type="application/x-mpegURL">
    {% endfor %}
-   
 
    <script>
     document.addEventListener('DOMContentLoaded', () => {
