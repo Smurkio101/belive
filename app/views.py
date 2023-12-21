@@ -77,13 +77,6 @@ def filter (request):
     return render (request, "app/pages/filter.html", context)
 
 def  stream(request, video_id):
-    context = {
-        "page":"stream"
-        }
-    return render (request, "app/pages/stream.html", context) 
-
-
-def watch(request, video_id):
     res = requests.get("https://gogoanime-thullydev-api.onrender.com/vidcdn/watch/naruto-episode-220")
     data = res.json()
     pprint(data)
@@ -91,4 +84,11 @@ def watch(request, video_id):
         "page":"watch",
         "data": data,
         }
-    return render (request, "app/pages/watchpage.html", context)
+    return render (request, "app/pages/stream.html", context) 
+
+
+def watch(request, video_id):
+     context = {
+        "page":"stream"
+        }
+     return render (request, "app/pages/watchpage.html", context)
