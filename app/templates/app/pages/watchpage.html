@@ -25,66 +25,20 @@
       </div>
       <div class="episode-con">
         <div class="inner-con">
-        <div class="label-con">
-        EPISODES
-        </div>
-        <div class="episodes-block-nav-con">
-        <ul>
-        <li class="episodes-block-link-item"><a href="#" class="episode-link" data-block-id="ep_1-10">1-10</a></li>
-        <li class="episodes-block-link-item"><a href="#" class="episode-link" data-block-id="ep_10-20">10-20</a></li>
-        <li class="episodes-block-link-item"><a href="#" class="episode-link" data-block-id="ep_20-30">20-30</a></li>
-        </ul>
-        </div>
-        <div class="episodes-link-con">
-        <div class="episode-block active" data-open="true" data-block-id="ep_1-10">
-           <ul>
-            <li class="episode-link"><a href="" class="episode">episode-1-10</a></li>
-            <li class="episode-link"><a href="" class="episode">episode-1-10</a></li>
-            <li class="episode-link"><a href="" class="episode">episode-1-10</a></li>
-            <li class="episode-link"><a href="" class="episode">episode-1-10</a></li>
-            <li class="episode-link"><a href="" class="episode">episode-1-10</a></li>
-            <li class="episode-link"><a href="" class="episode">episode-1-10</a></li>
-            <li class="episode-link"><a href="" class="episode">episode-1-10</a></li>
-            <li class="episode-link"><a href="" class="episode">episode-1-10</a></li>
-            <li class="episode-link"><a href="" class="episode">episode-1-10</a></li>
-            <li class="episode-link"><a href="" class="episode">episode-1-10</a></li>
-           </ul>
-        </div>
-        <div class="episode-block" data-open="false" data-block-id="ep_10-20">
-           <ul>
-            <li class="episode-link"><a href="" class="episode">episode-10-20</a></li>
-            <li class="episode-link"><a href="" class="episode">episode-10-20</a></li>
-            <li class="episode-link"><a href="" class="episode">episode-10-20</a></li>
-            <li class="episode-link"><a href="" class="episode">episode-10-20</a></li>
-            <li class="episode-link"><a href="" class="episode">episode-10-20</a></li>
-            <li class="episode-link"><a href="" class="episode">episode-10-20</a></li>
-            <li class="episode-link"><a href="" class="episode">episode-10-20</a></li>
-            <li class="episode-link"><a href="" class="episode">episode-10-20</a></li>
-            <li class="episode-link"><a href="" class="episode">episode-10-20</a></li>
-            <li class="episode-link"><a href="" class="episode">episode-10-20</a></li>
-           </ul>
-        </div>
-        <div class="episode-block" data-open="false" data-block-id="ep_20-30">
-           <ul>
-            <li class="episode-link"><a href="" class="episode">episode-20-30</a></li>
-            <li class="episode-link"><a href="" class="episode">episode-20-30</a></li>
-            <li class="episode-link"><a href="" class="episode">episode-20-30</a></li>
-            <li class="episode-link"><a href="" class="episode">episode-20-30</a></li>
-            <li class="episode-link"><a href="" class="episode">episode-20-30</a></li>
-            <li class="episode-link"><a href="" class="episode">episode-20-30</a></li>
-            <li class="episode-link"><a href="" class="episode">episode-20-30</a></li>
-            <li class="episode-link"><a href="" class="episode">episode-20-30</a></li>
-            <li class="episode-link"><a href="" class="episode">episode-20-30</a></li>
-            <li class="episode-link"><a href="" class="episode">episode-20-30</a></li>
-           </ul>
-        </div>
-        </div>
-        </div>
-        </div>
+            <div class="label-con">
+                EPISODES
+            </div>
+            <div class="episodes-link-con">
+                <div class="episode-block active" data-open="true" data-block-id="ep_1-10">
+                    <ul>
+                        {% for episode in data.episodesList %}
+                        <li class="episode-link"><a href="/watchpage/{{episode.slug}}" class="episode">{{episode.episodeNum}}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
-    </div> 
      
 </div>
        <script type="text/javascript" src="{% static "script/discrip.js" %}"></script>
