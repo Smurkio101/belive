@@ -8,7 +8,7 @@ urlpatterns = [
     path('filter', views.filter, name='filter'), 
     path('register', views.register, name='register'),
     path('profile', views.profile, name='profile'),
-  
+  path('anime', views.anime, name='anime'),
 ]
      
  

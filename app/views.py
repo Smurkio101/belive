@@ -97,3 +97,11 @@ def watch(request, video_id):
         "data": data,
         }
     return render (request, "app/pages/watchpage.html", context)
+
+
+
+def anime (request):
+    context = {
+           "page": "anime"
+    }
+    return render (request, "app/pages/anime.html", context) 
