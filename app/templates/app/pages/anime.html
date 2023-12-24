@@ -1,1 +1,19 @@
+{% extends 'app/pages/base.html' %}
+{% load static %}
 
+{% block content %}
+
+<div class="container">
+    {% for anime in data %}
+    <div class="image-wrapper">
+        <a href="/anime/{{ anime.anime_id }}">
+        <img src="{{ anime.animeImg }}" alt="{{ anime.type }}">
+        <p>{{ anime.releasedDate }}</p>
+        </a>
+    </div>
+    {% endfor %}
+</div>
+</div>
+</div>
+       
+{% endblock %}

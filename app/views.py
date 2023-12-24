@@ -100,8 +100,13 @@ def watch(request, video_id):
 
 
 
-def anime (request):
+def anime (request, anime_id):
+    res = requests.get(f"https://gogoanime-thullydev-api.onrender.com/anime-details/one-piece{anime_id}")
+    data = res.json()
+    pprint(data)
     context = {
-           "page": "anime"
-    }
+        "page":"anime",
+        "data": data,
+        }
     return render (request, "app/pages/anime.html", context) 
+
