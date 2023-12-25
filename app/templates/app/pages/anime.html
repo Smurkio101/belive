@@ -6,12 +6,13 @@
 <div class="container">
     {% for anime in data %}
     <div class="image-wrapper">
-        <a href="/anime/{{ anime.anime_id }}">
-        <img src="{{ anime.animeImg }}" alt="{{ anime.type }}">
-        <p>{{ anime.releasedDate }}</p>
+        <img src="{{ data.animeImg }}" alt="{{ data.animeTitle }}">
+        <p>{{ data.animeTitle }}</p>
         </a>
     </div>
     {% endfor %}
+</div>
+    
 </div>
 </div>
 </div>
