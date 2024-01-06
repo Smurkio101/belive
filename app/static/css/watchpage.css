@@ -17,8 +17,7 @@ body {
     }
     p {
         background-color: #2b2b2b; /* Yellow background */
-        color: #d80bdf;
-        text-align: center;
+        color: #f0ecf0;
         border: 1px;
     }
 
@@ -26,7 +25,7 @@ body {
     ropdown-content {
       display: none;
       position: center;
-      background-color: #e23535;
+      background-color: #282727;
       color: #3f1dff; /* Yellow text color */
       min-width: 160px;
       box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -36,7 +35,7 @@ body {
     
     .inner-con {
         width: 90%;
-        background: red;
+        background: rgb(40, 38, 38);
     }
     
     .episode-con {
@@ -81,3 +80,18 @@ body {
     .episode-block.active {
         display: block;
     }
+
+    
+    .video-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Adjust as needed */
+      }
+    
+      .video-container iframe {
+        width: 560px; /* Set your desired width */
+        height: 315px; /* Set your desired height */
+      }
+
+

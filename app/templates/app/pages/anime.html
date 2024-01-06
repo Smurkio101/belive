@@ -4,17 +4,19 @@
 {% block content %}
 
 <div class="container">
-    {% for anime in data %}
     <div class="image-wrapper">
         <img src="{{ data.animeImg }}" alt="{{ data.animeTitle }}">
-        <p>{{ data.animeTitle }}</p>
-        </a>
     </div>
-    {% endfor %}
+    <div class="info-wrapper">
+        <p class="title">{{ data.animeTitle }}</p>
+        <p class="other-names">{{ data.otherNames }}</p>
+        <p class="type">{{ data.type }}</p>
+        <p class="released-status">{{ data.releasedDate }} - {{ data.status}}</p>
+        {% for genre in data.genres %}
+        <p class="genres">{{ genre}}</p>
+{% endfor %}
+        <p class="synopsis">{{ data.synopsis}}</p>
+    </div>
 </div>
-    
-</div>
-</div>
-</div>
-       
+         
 {% endblock %}

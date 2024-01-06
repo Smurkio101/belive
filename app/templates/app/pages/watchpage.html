@@ -5,17 +5,12 @@
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/watchpage.css'%}">
 
-
-
-       <p>ANIME NAME:{{data.animeTitle}}</p>
   
-<div class="dropdown">
-  <button onclick="toggleDescription()">discription</button>
-  <div id="description" class="dropdown-content">
-    <p>{{data.synopsis}}</p>
-  </div>
-</div>
+<a href="{% url 'home' %}">Home > </a> {{ data.type }}
+ <p>> watching:{{data.animeTitle}}</p>
 
+
+    
     <iframe width="560" height="315"  src="/stream/nourto" frameborder="0" allowfullscreen></iframe>
       <div class="controls">
           <button id="playButton" class="button-green">▶</button>
@@ -23,6 +18,7 @@
           <input type="text" id="videoInput" placeholder="Enter video URL">
           <button id="loadButton" class="button-orange">Load Video</button>
       </div>
+
       <div class="episode-con">
         <div class="inner-con">
             <div class="label-con">
@@ -39,7 +35,22 @@
             </div>
         </div>
     </div>
-     
+    <div class="dropdown">
+        <button onclick="toggleDescription()">discription</button>
+        <div id="description" class="dropdown-content">
+          <p>{{data.synopsis}}</p>
+        </div>
+      </div>
+
+      <div class="container">
+        {% for anime in data %}
+        <div class="image-wrapper">
+            <a href="/watchpage/{{anime.animeId}}">
+            <img src="{{anime.animeImg}}" alt="{{anime.animeTitle}}">
+            <p>{{anime.animeTitle}}</p>
+            </a>
+        </div>
+        {% endfor %}
 </div>
        <script type="text/javascript" src="{% static "script/discrip.js" %}"></script>
        <script type="text/javascript" src="{% static "script/video.js" %}"></script>

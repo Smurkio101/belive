@@ -54,10 +54,12 @@
 </div>
 <div class="swiper-container">
   <div class="swiper-wrapper">
-    {% for anime in data.animes %}
+    {% for anime in data %}
       <div class="swiper-slide">
-        <img src="{{anime.image_url}}" alt="{{anime.title}}">
-        <p>{{anime.title}}</p>
+        <a href="/watchpage/{{anime.animeId}}">
+        <img src="{{anime.animeImg}}" alt="{{anime.animeTitle}}">
+          <p>{{anime.animeTitle}}</p>
+        </a>
       </div>
     {% endfor %}
   </div>
@@ -65,8 +67,6 @@
   <div class="swiper-button-next"></div>
   <div class="swiper-scrollbar"></div>
 </div>
-</div>
-
 
 
 <div class="container">

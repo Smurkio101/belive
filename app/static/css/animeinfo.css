@@ -1,0 +1,60 @@
+/* Container */
+.container {
+  display: flex;
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #000000;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /*  the image won't overflow container */
+}
+
+/* Image Wrapper */
+.image-wrapper {
+  flex: 0 0 30%; /* Adjust the width of the image column */
+}
+
+.image-wrapper img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Info Wrapper */
+.info-wrapper {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-wrapper p {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.info-wrapper .title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.info-wrapper .released-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Additional Styling for Enhancement */
+.container:hover {
+  background-color: #e0e0e0;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.info-wrapper .genres {
+  color: #3498db;
+}
+
+.info-wrapper .synopsis {
+  color: #27ae60;
+}
