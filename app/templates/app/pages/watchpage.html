@@ -6,51 +6,17 @@
 <link rel="stylesheet" href="{% static 'css/watchpage.css'%}">
 
   
-<a href="{% url 'home' %}">Home > </a> {{ data.type }}
- <p>> watching:{{data.animeTitle}}</p>
+<a href="{% url 'home' %}">Home > </a>
+ <p>> watching:{{animeTitle}}</p>
 
 
     
-    <iframe width="560" height="315"  src="/stream/nourto" frameborder="0" allowfullscreen></iframe>
-      <div class="controls">
-          <button id="playButton" class="button-green">▶</button>
-          <button id="reloadButton" class="button-blue">↺</button>
-          <input type="text" id="videoInput" placeholder="Enter video URL">
-          <button id="loadButton" class="button-orange">Load Video</button>
-      </div>
+ <iframe width="560" height="315"  src="/stream/{{slug}}" frameborder="0" allowfullscreen></iframe>
+     
+   
 
-      <div class="episode-con">
-        <div class="inner-con">
-            <div class="label-con">
-                EPISODES
-            </div>
-            <div class="episodes-link-con">
-                <div class="episode-block active" data-open="true" data-block-id="ep_1-10">
-                    <ul>
-                        {% for episode in data.episodesList %}
-                        <li class="episode-link"><a href="/watchpage/{{episode.slug}}" class="episode">{{episode.episodeNum}}</a></li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="dropdown">
-        <button onclick="toggleDescription()">discription</button>
-        <div id="description" class="dropdown-content">
-          <p>{{data.synopsis}}</p>
-        </div>
-      </div>
-
-      <div class="container">
-        {% for anime in data %}
-        <div class="image-wrapper">
-            <a href="/watchpage/{{anime.animeId}}">
-            <img src="{{anime.animeImg}}" alt="{{anime.animeTitle}}">
-            <p>{{anime.animeTitle}}</p>
-            </a>
-        </div>
-        {% endfor %}
+     
+       
 </div>
        <script type="text/javascript" src="{% static "script/discrip.js" %}"></script>
        <script type="text/javascript" src="{% static "script/video.js" %}"></script>

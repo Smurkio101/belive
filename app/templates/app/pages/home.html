@@ -46,17 +46,15 @@
     <a href="login">🤷‍♂️</a>
   {% endif %}
   </div>
-</div>
 </nav>
     
 
 
-</div>
 <div class="swiper-container">
   <div class="swiper-wrapper">
     {% for anime in data %}
       <div class="swiper-slide">
-        <a href="/watchpage/{{anime.animeId}}">
+        <a href="/anime/{{anime.animeId}}">
         <img src="{{anime.animeImg}}" alt="{{anime.animeTitle}}">
           <p>{{anime.animeTitle}}</p>
         </a>
@@ -72,12 +70,15 @@
 <div class="container">
   {% for anime in data %}
   <div class="image-wrapper">
-      <a href="/watchpage/{{anime.animeId}}">
+      <a href="/anime/{{anime.animeId}}">
       <img src="{{anime.animeImg}}" alt="{{anime.animeTitle}}">
       <p>{{anime.animeTitle}}</p>
       </a>
   </div>
   {% endfor %}
+
+
+  
 </div>
 </div>
 </div>

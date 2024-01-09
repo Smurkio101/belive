@@ -1,8 +1,9 @@
 {% extends 'app/pages/base.html' %}
 {% load static %}
+<link rel="stylesheet" href="{% static 'css/ep.css' %}">
 
 {% block content %}
-
+<link rel="stylesheet" href="{% static 'css/ep.css' %}">
 <div class="container">
     <div class="image-wrapper">
         <img src="{{ data.animeImg }}" alt="{{ data.animeTitle }}">
@@ -17,6 +18,23 @@
 {% endfor %}
         <p class="synopsis">{{ data.synopsis}}</p>
     </div>
+    <div class="episode-con">
+        <div class="inner-con">
+            <div class="label-con">
+                EPISODES
+            </div>
+            <div class="episodes-link-con">
+                <div class="episode-block active" data-open="true" data-block-id="ep_1-10">
+                    <ul>
+                        {% for episode in data.episodesList %}
+                        <li class="episode-link"><a href="/watchpage/{{episode.episodeId}}" class="episode">{{episode.episodeNum}}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div> 
 </div>
+
          
 {% endblock %}

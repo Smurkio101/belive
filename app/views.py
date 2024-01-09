@@ -8,12 +8,6 @@ import json
 from pprint import pprint
 
 
-def filter (request):
-    context = {
-           "page": "filter"
-    }
-    return render (request, "app/pages/filter.html", context) 
-
 def register (request):
     if request.method == 'POST':
          form =  UserRegisterForm(request.POST)
@@ -52,13 +46,9 @@ def profile(request):
     return render(request, "app/pages/profile.html", context)
 
 
-
-
-
 def home (request):
     res = requests.get("https://gogoanime-thullydev-api.onrender.com/recent-release")
     data = res.json()
-    pprint(data)
     context = {
            "page": "home",
            "data": data,
@@ -69,32 +59,31 @@ def home (request):
 def filter (request):
     res = requests.get("")
     data = res.json()
-    pprint(data)
     context = {
            "page": "filter",
            "data": data,
     }
     return render (request, "app/pages/filter.html", context)
 
+
 def  stream(request, video_id):
-    res = requests.get("https://gogoanime-thullydev-api.onrender.com/vidcdn/watch/naruto-episode-220")
+    res = requests.get(f"https://gogoanime-thullydev-api.onrender.com/vidcdn/watch/{video_id}")
     data = res.json()
     pprint(data)
     context = {
         "page":"watch",
         "data": data,
+         "video_id": video_id,
         }
     return render (request, "app/pages/stream.html", context) 
 
 
 
 def watch(request, video_id):
-    res = requests.get(f"https://gogoanime-thullydev-api.onrender.com/anime-details/{video_id}")
-    data = res.json()
-    pprint(data)
     context = {
         "page":"watch",
-        "data": data,
+        "slug": video_id,
+      
         }
     return render (request, "app/pages/watchpage.html", context)
 
@@ -103,10 +92,9 @@ def watch(request, video_id):
 def anime (request, anime_id):
     res = requests.get(f"https://gogoanime-thullydev-api.onrender.com/anime-details/{anime_id}")
     data = res.json()
-    print(f"lENGTH ======> {len(data)}")
     context = {
         "page":"anime",
         "data": data,
-        }
+    }
     return render (request, "app/pages/anime.html", context) 
 

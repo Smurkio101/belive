@@ -58,3 +58,69 @@
 .info-wrapper .synopsis {
   color: #27ae60;
 }
+
+.episode-con {
+  display: flex;
+  justify-content: center;
+  background: rgb(40, 38, 38);
+}
+
+.inner-con {
+  width: 90%;
+  max-width: 1200px; /* Adjust max-width as needed */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.label-con {
+  font-size: 24px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.episode-block {
+  display: none;
+}
+
+.episode-block.active {
+  display: block;
+}
+
+.episode-block > ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.episode-link {
+  background: blue;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+a.episode {
+  color: wheat;
+  text-decoration: none;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+  .inner-con {
+      padding: 15px;
+  }
+
+  .label-con {
+      font-size: 20px;
+  }
+
+  .episode-block > ul {
+      gap: 10px;
+  }
+
+  .episode-link {
+      padding: 8px;
+  }
+}
