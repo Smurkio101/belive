@@ -7,7 +7,6 @@ import requests
 import json
 from pprint import pprint
 
-
 def register (request):
     if request.method == 'POST':
          form =  UserRegisterForm(request.POST)
