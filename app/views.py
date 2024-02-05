@@ -46,7 +46,7 @@ def profile(request):
 
 
 def home (request):
-    res = requests.get("https://gogoanime-thullydev-api.onrender.com/recent-release")
+    res = requests.get(f"https://gogoanime-thullydev-api.onrender.com/recent-release")
     data = res.json()
     context = {
            "page": "home",
@@ -97,3 +97,23 @@ def anime (request, anime_id):
     }
     return render (request, "app/pages/anime.html", context) 
 
+
+
+def stream(request, anime_id, video_id):
+    # Fetch video details
+    video_res = requests.get(f"https://gogoanime-thullydev-api.onrender.com/vidcdn/watch/{video_id}")
+    video_data = video_res.json()
+    pprint(video_data)
+
+    # Fetch anime details
+    anime_res = requests.get(f"https://gogoanime-thullydev-api.onrender.com/anime-details/{anime_id}")
+    anime_data = anime_res.json()
+    pprint(anime_data)
+
+    context = {
+        "page": "watch",
+        "video_data": video_data,
+        "anime_data": anime_data,
+        "video_id": video_id,
+    }
+    return render(request, "app/pages/stream.html", context)
